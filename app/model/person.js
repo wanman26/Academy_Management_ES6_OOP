@@ -1,5 +1,6 @@
 class Person {
-  constructor(fullName, address, code, email) {
+  constructor(category, fullName, address, code, email) {
+    this.category = category;
     this.fullName = fullName;
     this.address = address;
     this.code = code;

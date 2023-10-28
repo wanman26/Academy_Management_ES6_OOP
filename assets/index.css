@@ -10,7 +10,17 @@
     justify-content: space-between;
     align-items: end;
     height: 25px;
+}
 
+li {
+    list-style: none;
+}
+
+header {
+    /* background-color: black; */
+    color: black;
+    /* border-bottom: 3px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .typePerson #student,
@@ -34,27 +44,36 @@
     color: white;
 }
 
+.category_button span {
+    pointer-events: none;
+}
+
 .search {
     display: flex;
-
 }
 
 .btnSearch {
     border: 1px solid #dee2e6;
+    transform: translateX(80px);
+
 }
 
 .searchArea {
     border: 1px solid #dee2e6;
     border-radius: 0.25rem;
     align-items: end;
+    width: 300px;
+    transform: translateX(80px);
 }
 
+.add_person {
+    transform: translateY(15px);
+}
 
-/* 
-.tblBody {
-    display: table;
-    table-layout: fixed;
-} */
+.add_person #navbarDropdown {
+    line-height: 1;
+}
+
 
 table {
     width: 100%;
@@ -93,11 +112,7 @@ table td b {
     margin-top: 10px;
 }
 
-/* .typePerson #student {
-    background-color: rgba(0, 0, 0, 0.192);
-    color: black;
-    font-weight: bold;
-} */
+
 
 #table_employee,
 #table_customer {
@@ -109,4 +124,13 @@ table td b {
     background-color: rgba(0, 132, 255, 0.753) !important;
     color: white !important;
     /* font-weight: bold; */
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+#myModalCustomer select {
+    width: 40px;
+    height: 30px;
 }

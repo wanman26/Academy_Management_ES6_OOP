@@ -21,29 +21,46 @@
 <body>
     <!-- BEGIN HEADER -->
     <header>
-        <h1 class="text-center bg-dark p-3 text-white">ACADEMY MANAGEMENT</h1>
+        <h1 class="text-center p-3">ACADEMY MANAGEMENT</h1>
     </header>
     <!-- END HEADER -->
 
-    <section class="">
+    <section class="academy_data">
         <div class="container mt-5">
             <div class="tblHead">
                 <div class="typePerson">
-                    <a id="student">Students</a>
-                    <a id="employee">Employees</a>
-                    <a id="customer">Customer</a>
+                    <a class="category_button selected" id="student">Students (<span id="quantityStudents"></span>)</a>
+                    <a class="category_button" id="employee">Employees (<span id="quantityEmployees"></span>)</a>
+                    <a class="category_button" id="customer">Customers (<span id="quantityCustomers"></span>)</a>
                 </div>
-
                 <div class="search">
                     <input class="searchArea p-1" type="text" placeholder="Search person">
                     <button class="btn btnSearch mr-3 input-group-text"><i class="fa fa-search"
                             aria-hidden="true"></i></button>
-                    <button id="addPerson" class="btn btn-primary">Add a Person</button>
-
+                </div>
+                <div class="add_person">
+                    <ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn btn-info
+                            " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="true">
+                                Add a person
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <button id="addStudent" class="btn btn-light w-100" type="button" data-toggle="modal"
+                                    data-target="#myModalStudent">Student</button>
+                                <button id="addEmployee" class="btn btn-light w-100" type="button" data-toggle="modal"
+                                    data-target="#myModalEmployee">Employee</button>
+                                <button id="addCustomer" class="btn btn-light w-100" type="button" data-toggle="modal"
+                                    data-target="#myModalCustomer">Customer</button>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
+
             </div>
-            <div class="tblBody">
+            <div class="tblBody" id="tblBody">
                 <table id="table_student">
                     <thead id="headStudent">
                         <tr>
@@ -58,8 +75,8 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody id="tblData">
-                        <tr>
+                    <tbody id="tblDataStudents">
+                        <!-- <tr>
                             <td>Trần Văn Minh</td>
                             <td>Hồ Chí Minh</td>
                             <td>S-1</td>
@@ -68,12 +85,13 @@
                             <td>7</td>
                             <td>8</td>
                             <td>8</td>
-                            <td><button class="btn-warning p-1 pl-2 pr-2 btn mr-3 ">Edit</button>
+                            <td><button class="btn-warning p-1 pl-2 pr-2 btn mr-3 "><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button class="btn btn-outline-danger p-1 pl-2 pr-2">
-                                    X
+                                    <i class="fa-solid fa-x"></i>
                                 </button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
                 <table id="table_employee">
@@ -83,14 +101,14 @@
                             <th>Address</th>
                             <th>Code</th>
                             <th>Email</th>
-                            <th>Working day</th>
+                            <th>Working Day</th>
                             <th>Daily Salary</th>
                             <th>Total Salary</th>
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody id="tblData">
-                        <tr>
+                    <tbody id="tblDataEmployees">
+                        <!-- <tr>
                             <td>Nguyễn Văn Quang</td>
                             <td>Hồ Chí Minh</td>
                             <td>E-1</td>
@@ -98,12 +116,13 @@
                             <td>20</td>
                             <td>50</td>
                             <td>$1000</td>
-                            <td><button class="btn-warning p-1 pl-2 pr-2 btn mr-3 ">Edit</button>
+                            <td><button class="btn-warning p-1 pl-2 pr-2 btn mr-3 "><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button class="btn btn-outline-danger p-1 pl-2 pr-2">
-                                    X
+                                    <i class="fa-solid fa-x"></i>
                                 </button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
                 <table id="table_customer">
@@ -119,8 +138,8 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody id="tblData">
-                        <tr>
+                    <tbody id="tblDataCustomers">
+                        <!-- <tr>
                             <td>Lê Văn Quang</td>
                             <td>Hồ Chí Minh</td>
                             <td>C-1</td>
@@ -129,23 +148,206 @@
                             <td>$1000</td>
                             <td>5 <i style="color: rgb(255, 145, 0); font-size: 15px; font-weight: 500;"
                                     class="fa-solid fa-star"></i></td>
-                            <td><button class="btn-warning p-1 pl-2 pr-2 btn mr-3 ">Edit</button>
+                            <td><button class="btn-warning p-1 pl-2 pr-2 btn mr-3 "><i
+                                        class="fa-solid fa-pencil"></i></button>
                                 <button class="btn btn-outline-danger p-1 pl-2 pr-2">
-                                    X
+                                    <i class="fa-solid fa-x"></i>
                                 </button>
                             </td>
-                        </tr>
-
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
-            <div class="tblFoot">
-                <button class="btn btn-danger">Previous</button>
-                <button class="btn-success btn">Next</button>
+            <div class="tblFoot mt-3 mb-3">
+                <button id="previous" class="btn btn-danger"><i class="fa-solid fa-angles-left"></i></button>
+                <p class="page d-inline m-2"><span class="text-danger">1</span>/5</p>
+                <button id="next" class="btn-success btn"><i class="fa-solid fa-angles-right"></i></button>
             </div>
         </div>
-
     </section>
+
+    <!-- The Modal Add Student -->
+    <div class="modal" id="myModalStudent">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">STUDENT</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body ">
+                    <div class="form-group">
+                        <label for="">Full Name</label>
+                        <input id="student_name" class="form-control" type="text" placeholder="Ex: Nguyễn Quang Mẫn">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Address</label>
+                        <input id="student_address" class="form-control" type="text" placeholder="Ex: Hồ Chí Minh">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Code</label>
+                        <input id="student_code" class="form-control" type="text" placeholder="Ex: S-1">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input id="student_email" class="form-control" type="email"
+                            placeholder="Ex: studentname@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Math Score</label>
+                        <input id="student_math" class="form-control" type="number" placeholder="Ex: 1 -> 10">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Physics Score</label>
+                        <input id="student_physics" class="form-control" type="number" placeholder="Ex: 1 -> 10">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Chemistry Score</label>
+                        <input id="student_chemistry" class="form-control" type="number" placeholder="Ex: 1 -> 10">
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button id="btnAddStudent" type="button" class="btn btn-danger m-auto" data-dismiss="modal">Add
+                        student</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal Add Employee -->
+    <div class="modal" id="myModalEmployee">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">EMPLOYEE</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body ">
+                    <div class="form-group">
+                        <label for="">Full Name</label>
+                        <input id="employee_name" class="form-control" type="text" placeholder="Ex: Nguyễn Quang Mẫn">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Address</label>
+                        <input id="employee_address" class="form-control" type="text" placeholder="Ex: Hồ Chí Minh">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Code</label>
+                        <input id="employee_code" class="form-control" type="text" placeholder="Ex: E-1">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input id="employee_email" class="form-control" type="email"
+                            placeholder="Ex: employeename@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Working Day</label>
+                        <input id="employee_working_day" class="form-control" type="number" placeholder="Ex: 22">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Daily Salary</label>
+                        <input id="employee_daily_salary" class="form-control" type="number" placeholder="Ex: $20">
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button id="btnAddEmployee" type="button" class="btn btn-danger m-auto" data-dismiss="modal">Add
+                        employee</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- The Modal Add Customer -->
+    <div class="modal" id="myModalCustomer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">CUSTOMER</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body ">
+                    <div class="form-group">
+                        <label for="">Full Name</label>
+                        <input id="customer_name" class="form-control" type="text" placeholder="Ex: Nguyễn Quang Mẫn">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Address</label>
+                        <input id="customer_address" class="form-control" type="text" placeholder="Ex: Hồ Chí Minh">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Code</label>
+                        <input id="customer_code" class="form-control" type="text" placeholder="Ex: C-1">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input id="customer_email" class="form-control" type="text"
+                            placeholder="Ex: customername@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Company name</label>
+                        <input id="customer_company_name" class="form-control" type="text" placeholder="Ex: XYZ Ltd">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Invoice</label>
+                        <input id="customer_invoice" class="form-control" type="text" placeholder="Ex: $2000">
+                    </div>
+                    <div class="form-group">
+                        <label class="mr-2">Rate</label>
+                        <select id="customer_rate">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button id="btnAddCustomer" type="button" class="btn btn-danger m-auto" data-dismiss="modal">Add
+                        employee</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal Edit-->
+    <div class="modal" id="myModalEdit">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Person</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -162,8 +364,11 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- AXIOS -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+        integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- MAIN SCRIPT -->
+    <script src="./app/service/callapi.js"></script>
     <script type="module" src="./app/controller/index.js"></script>
 
 </body>
