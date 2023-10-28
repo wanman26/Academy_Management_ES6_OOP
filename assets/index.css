@@ -28,7 +28,8 @@
 .typePerson #student:hover,
 #employee:hover,
 #customer:hover {
-    color: red;
+    background-color: rgba(0, 0, 0, 0.192);
+    color: black;
 }
 
 .search {
@@ -47,11 +48,10 @@
 }
 
 
-
-/* .tblBody {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
+/* 
+.tblBody {
+    display: table;
+    table-layout: fixed;
 } */
 
 table {
@@ -76,14 +76,23 @@ table thead th {
 }
 
 #table_student {
-    display: none;
-
+    margin-top: 10px;
 }
 
-#table_employee {
-    display: none;
-}
+/* .typePerson #student {
+    background-color: rgba(0, 0, 0, 0.192);
+    color: black;
+    font-weight: bold;
+} */
 
+#table_employee,
 #table_customer {
     display: none;
+    margin-top: 10px;
+}
+
+.selected {
+    background-color: rgba(0, 132, 255, 0.589) !important;
+    color: black;
+    /* font-weight: bold; */
 }
