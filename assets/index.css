@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-items: end;
     height: 25px;
+
 }
 
 .typePerson #student,
@@ -23,13 +24,14 @@
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .typePerson #student:hover,
 #employee:hover,
 #customer:hover {
-    background-color: rgba(0, 0, 0, 0.192);
-    color: black;
+    background-color: rgba(0, 132, 255, 0.589);
+    color: white;
 }
 
 .search {
@@ -66,9 +68,21 @@ th {
     padding: 5px;
 }
 
+table thead {
+    background-color: rgba(0, 0, 0, 0.192);
+
+}
+
+
 table thead th {
     padding: 15px;
+    font-weight: 600;
 }
+
+table td b {
+    font-weight: 500;
+}
+
 
 .tblFoot {
     position: relative;
@@ -92,7 +106,7 @@ table thead th {
 }
 
 .selected {
-    background-color: rgba(0, 132, 255, 0.589) !important;
-    color: black;
+    background-color: rgba(0, 132, 255, 0.753) !important;
+    color: white !important;
     /* font-weight: bold; */
 }
