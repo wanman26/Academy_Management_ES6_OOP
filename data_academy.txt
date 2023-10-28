@@ -1,0 +1,244 @@
+[
+   {
+    "category":"student",
+      "fullName":"Trần Văn Minh",
+      "address":"Hồ Chí Minh",
+      "code":"S-1",
+      "email":"minh@gmail.com",
+      "math":"6",
+      "physics":"7",
+      "chemistry":"8"
+   },
+   {
+    "category":"student",
+      "fullName":"Nguyễn Thị Hương",
+      "address":"Hà Nội",
+      "code":"S-2",
+      "email":"huong@gmail.com",
+      "math":"8",
+      "physics":"9",
+      "chemistry":"7"
+   },
+   {
+    "category":"student",
+      "fullName":"Lê Văn Quốc",
+      "address":"Đà Nẵng",
+      "code":"S-3",
+      "email":"quoc@gmail.com",
+      "math":"7",
+      "physics":"8",
+      "chemistry":"9"
+   },
+   {
+    "category":"student",
+      "fullName":"Phạm Thị Hà",
+      "address":"Hồ Chí Minh",
+      "code":"S-4",
+      "email":"ha@gmail.com",
+      "math":"9",
+      "physics":"7",
+      "chemistry":"6"
+   },
+   {
+    "category":"student",
+      "fullName":"Hoàng Văn Hùng",
+      "address":"Hà Nội",
+      "code":"S-5",
+      "email":"hung@gmail.com",
+      "math":"7",
+      "physics":"8",
+      "chemistry":"7"
+   },
+   {
+    "category":"student",
+      "fullName":"Trần Thị Linh",
+      "address":"Hồ Chí Minh",
+      "code":"S-6",
+      "email":"linh@gmail.com",
+      "math":"6",
+      "physics":"7",
+      "chemistry":"8"
+   },
+   {
+    "category":"student",
+      "fullName":"Lê Minh Tâm",
+      "address":"Đà Nẵng",
+      "code":"S-7",
+      "email":"tam@gmail.com",
+      "math":"8",
+      "physics":"9",
+      "chemistry":"7"
+   },
+   {
+    "category":"student",
+      "fullName":"Nguyễn Thị Trang",
+      "address":"Hà Nội",
+      "code":"S-8",
+      "email":"trang@gmail.com",
+      "math":"7",
+      "physics":"8",
+      "chemistry":"9"
+   },
+   {
+    "category":"student",
+      "fullName":"Phạm Văn Thành",
+      "address":"Hồ Chí Minh",
+      "code":"S-9",
+      "email":"thanh@gmail.com",
+      "math":"9",
+      "physics":"7",
+      "chemistry":"6"
+   },
+   {
+    "category":"student",
+      "fullName":"Hoàng Văn Anh",
+      "address":"Hà Nội",
+      "code":"S-10",
+      "email":"anh@gmail.com",
+      "math":"7",
+      "physics":"8",
+      "chemistry":"7"
+   },
+{
+    "category":"employee",
+      "fullName":"Nguyễn Văn Quang",
+      "address":"Hồ Chí Minh",
+      "code":"E-1",
+      "email":"quang1@gmail.com",
+      "workingDay":"20",
+      "dailySalary":"50"
+   },
+   {
+    "category":"employee",
+      "fullName":"Trần Văn Hòa",
+      "address":"Hà Nội",
+      "code":"E-2",
+      "email":"hoa@gmail.com",
+      "workingDay":"22",
+      "dailySalary":"55"
+   },
+   {
+    "category":"employee",
+      "fullName":"Lê Thị Bảo",
+      "address":"Đà Nẵng",
+      "code":"E-3",
+      "email":"bao@gmail.com",
+      "workingDay":"18",
+      "dailySalary":"48"
+   },
+   {
+    "category":"employee",
+      "fullName":"Phạm Minh Tú",
+      "address":"Hồ Chí Minh",
+      "code":"E-4",
+      "email":"tu@gmail.com",
+      "workingDay":"19",
+      "dailySalary":"52"
+   },
+   {
+    "category":"employee",
+      "fullName":"Hoàng Thị Lan",
+      "address":"Hà Nội",
+      "code":"E-5",
+      "email":"lan@gmail.com",
+      "workingDay":"21",
+      "dailySalary":"49"
+   },
+   {
+    "category":"employee",
+      "fullName":"Nguyễn Văn An",
+      "address":"Đà Nẵng",
+      "code":"E-6",
+      "email":"an@gmail.com",
+      "workingDay":"23",
+      "dailySalary":"51"
+   },
+   {
+    "category":"employee",
+      "fullName":"Lê Minh Thảo",
+      "address":"Hà Nội",
+      "code":"E-7",
+      "email":"thao@gmail.com",
+      "workingDay":"20",
+      "dailySalary":"50"
+   },
+   {
+    "category":"employee",
+      "fullName":"Trần Văn Quốc",
+      "address":"Đà Nẵng",
+      "code":"E-8",
+      "email":"quoc@gmail.com",
+      "workingDay":"22",
+      "dailySalary":"54"
+   },
+   {
+    "category":"employee",
+      "fullName":"Phạm Thị Hương",
+      "address":"Hồ Chí Minh",
+      "code":"E-9",
+      "email":"huong@gmail.com",
+      "workingDay":"19",
+      "dailySalary":"53"
+   },
+   {
+    "category":"employee",
+      "fullName":"Lê Văn Long",
+      "address":"Hà Nội",
+      "code":"E-10",
+      "email":"long@gmail.com",
+      "workingDay":"24",
+      "dailySalary":"47"
+   },
+   {
+    "category":"customer",
+      "fullName":"Lê Văn Quang",
+      "address":"Hồ Chí Minh",
+      "code":"C-1",
+      "email":"quang2@gmail.com",
+      "companyName":"SCE company",
+      "invoice":"1000",
+      "rate":"5"
+   },
+   {
+    "category":"customer",
+      "fullName":"Trần Văn Hòa",
+      "address":"Hà Nội",
+      "code":"C-2",
+      "email":"hoa@gmail.com",
+      "companyName":"ABC Inc",
+      "invoice":"800",
+      "rate":"4"
+   },
+   {
+    "category":"customer",
+      "fullName":"Lê Thị Bảo",
+      "address":"Đà Nẵng",
+      "code":"C-3",
+      "email":"bao@gmail.com",
+      "companyName":"XYZ Ltd",
+      "invoice":"950",
+      "rate":"5"
+   },
+   {
+    "category":"customer",
+      "fullName":"Phạm Minh Tú",
+      "address":"Hồ Chí Minh",
+      "code":"C-4",
+      "email":"tu@gmail.com",
+      "companyName":"DEF Corp",
+      "invoice":"1200",
+      "rate":"4"
+   },
+   {
+    "category":"customer",
+      "fullName":"Hoàng Thị Lan",
+      "address":"Hà Nội",
+      "code":"C-5",
+      "email":"lan@gmail.com",
+      "companyName":"GHI Group",
+      "invoice":"900",
+      "rate":"3"
+   }
+]
+
+

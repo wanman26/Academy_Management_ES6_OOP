@@ -1,0 +1,89 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tblHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 25px;
+}
+
+.typePerson #student,
+#employee,
+#customer {
+    color: black;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border: 1px solid #dee2e6;
+    padding: 5px 20px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.typePerson #student:hover,
+#employee:hover,
+#customer:hover {
+    color: red;
+}
+
+.search {
+    display: flex;
+
+}
+
+.btnSearch {
+    border: 1px solid #dee2e6;
+}
+
+.searchArea {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    align-items: end;
+}
+
+
+
+/* .tblBody {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+} */
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+table td,
+tr,
+th {
+    border: 1px solid #dee2e6;
+    padding: 5px;
+}
+
+table thead th {
+    padding: 15px;
+}
+
+.tblFoot {
+    position: relative;
+    float: right;
+}
+
+#table_student {
+    display: none;
+
+}
+
+#table_employee {
+    display: none;
+}
+
+#table_customer {
+    display: none;
+}
