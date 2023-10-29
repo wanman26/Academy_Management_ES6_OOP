@@ -102,6 +102,12 @@ table td b {
     font-weight: 500;
 }
 
+/* avoid click on X icon */
+.fa-solid.fa-x,
+.fa-solid.fa-pencil {
+    pointer-events: none;
+}
+
 
 .tblFoot {
     position: relative;
@@ -123,7 +129,6 @@ table td b {
 .selected {
     background-color: rgba(0, 132, 255, 0.753) !important;
     color: white !important;
-    /* font-weight: bold; */
 }
 
 .form-group label {

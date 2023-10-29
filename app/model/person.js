@@ -8,8 +8,17 @@ class Person {
   }
 }
 export class Student extends Person {
-  constructor(fullName, address, code, email, math, physics, chemistry) {
-    super(fullName, address, code, email);
+  constructor(
+    category,
+    fullName,
+    address,
+    code,
+    email,
+    math,
+    physics,
+    chemistry
+  ) {
+    super(category, fullName, address, code, email);
     this.math = math;
     this.physics = physics;
     this.chemistry = chemistry;
@@ -20,10 +29,20 @@ export class Student extends Person {
 }
 
 export class Employee extends Person {
-  constructor(fullName, address, code, email, workingDay, dailySalary) {
-    super(fullName, address, code, email);
+  constructor(
+    category,
+    fullName,
+    address,
+    code,
+    email,
+    workingDay,
+    dailySalary,
+    rate
+  ) {
+    super(category, fullName, address, code, email, rate);
     this.workingDay = workingDay;
     this.dailySalary = dailySalary;
+    this.rate = rate;
   }
   calcSalary() {
     return this.workingDay * this.dailySalary;
@@ -31,8 +50,17 @@ export class Employee extends Person {
 }
 
 export class Customer extends Person {
-  constructor(fullName, address, code, email, companyName, invoice, rate) {
-    super(fullName, address, code, email);
+  constructor(
+    category,
+    fullName,
+    address,
+    code,
+    email,
+    companyName,
+    invoice,
+    rate
+  ) {
+    super(category, fullName, address, code, email);
     this.companyName = companyName;
     this.invoice = invoice;
     this.rate = rate;

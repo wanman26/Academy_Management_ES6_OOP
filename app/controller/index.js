@@ -60,16 +60,18 @@ async function getListPeople(data) {
       }
     }
     renderUIStudent(students);
+    renderUIEmployee(employees);
+    renderUICustomer(customers);
 
     // console.log(students);
     // console.log(employees);
     // console.log(customers);
 
-    if (data === "employee") {
-      renderUIEmployee(employees);
-    } else if (data === "customer") {
-      renderUICustomer(customers);
-    }
+    // if (data === "employee") {
+    //   renderUIEmployee(employees);
+    // } else if (data === "customer") {
+    //   renderUICustomer(customers);
+    // }
     document.getElementById("quantityStudents").innerHTML = students.length;
     document.getElementById("quantityEmployees").innerHTML = employees.length;
     document.getElementById("quantityCustomers").innerHTML = customers.length;
@@ -97,8 +99,8 @@ function renderUIStudent(data) {
     <td>${person.physics}</td>
     <td>${person.chemistry}</td>
     <td><b>${averageScore}</b></td>
-    <td><button id="editPerson_${person.code} type="button" data-toggle="modal"
-    data-target="#myModalEdit" class="btn-outline-dark p-1 pl-2 pr-2 btn mr-3 "><i
+    <td><button id="editPerson_${person.id}" type="button" data-toggle="modal"
+    data-target="#myModalEditStudent" class="btn-outline-dark p-1 pl-2 pr-2 btn mr-3 "><i
                 class="fa-solid fa-pencil"></i></button>
         <button id="${person.id}" class="btn btn-outline-danger p-1 pl-2 pr-2">
             <i class="fa-solid fa-x"></i>
@@ -122,8 +124,8 @@ function renderUIEmployee(data) {
     <td>$${person.workingDay}</td>
     <td>$${person.dailySalary}</td>
     <td><b>$${calcSalary}</b></td>
-    <td><button id="editPerson_${person.code} type="button" data-toggle="modal"
-    data-target="#myModalEdit" class="btn-outline-dark p-1 pl-2 pr-2 btn mr-3 "><i
+    <td><button id="editPerson_${person.id}" type="button" data-toggle="modal"
+    data-target="#myModalEditEmployee" class="btn-outline-dark p-1 pl-2 pr-2 btn mr-3 "><i
                 class="fa-solid fa-pencil"></i></button>
         <button id="${person.id}" class="btn btn-outline-danger p-1 pl-2 pr-2">
             <i class="fa-solid fa-x"></i>
@@ -147,11 +149,11 @@ function renderUICustomer(data) {
     <td><b>$${person.invoice}</b></td>
     <td>${person.rate} <i style="color: rgb(255, 145, 0); font-size: 15px; font-weight: 600;"
     class="fa-solid fa-star"></i></td>
-    <td><button id="editPerson_${person.code} type="button" data-toggle="modal"
-    data-target="#myModalEdit" class="btn btn-outline-dark p-1 pl-2 pr-2  mr-3 "><i
+    <td><button id="editPerson_${person.id}" type="button" data-toggle="modal"
+    data-target="#myModalEditCustomer" class="btn btn-outline-dark p-1 pl-2 pr-2  mr-3 "><i
                 class="fa-solid fa-pencil"></i></button>
         <button id="${person.id}" class="btn btn-outline-danger p-1 pl-2 pr-2">
-            <i class="fa-solid fa-x"></i>
+            <i class="fa-solid fa-x" ></i>
         </button>
     </td>
 </tr>`;
@@ -171,8 +173,7 @@ async function addStudent() {
     let student_email = document.getElementById("student_email").value;
     let student_math = document.getElementById("student_math").value;
     let student_physics = document.getElementById("student_physics").value;
-    let student_chemistry =
-      document.getElementById("student_chemistry").innerHTML;
+    let student_chemistry = document.getElementById("student_chemistry").value;
     // Create student object
     let student = new Student(
       student_category,
@@ -263,12 +264,49 @@ async function addCustomer() {
 }
 // DELETE PERSON
 
+document.getElementById("tblBody").addEventListener("click", deletePerson);
 async function deletePerson(event) {
-  if (event.target.id === id) console.log(id);
+  // console.log(event.target.id);
+  let id = event.target.id;
+
+  if (id) {
+    // alert("tblBody");
+    try {
+      let { data } = await api.deletePersonById(id);
+      getListPeople();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+// EDIT STUDENT
+// editPerson_${person.id}
+document.getElementById("tblBody").addEventListener("click", editPerson);
+async function editPerson(event) {
+  // console.log(event.target.id);
+  let idEdit = event.target.id;
+  if (idEdit.startsWith("editPerson_")) {
+    let id = idEdit.substring("editPerson_".length);
+    console.log(id);
+    fillInfo(id);
+  }
+}
+
+// FILL OLD INFORMATIONS INTO EDIT MODAL
+async function fillInfo(id) {
   try {
-    let { data: deleteByCode } = await api.deletePersonById(id);
-    console.log(deleteByCode);
-    getListPeople();
+    let { data } = await axios.get(
+      `https://6519a404818c4e98ac609bd3.mockapi.io/api/academy/${id}`
+    );
+    console.log(data.fullName);
+    // FILL INTO INPUT
+    document.getElementById("edit_student_name").value = data.fullName;
+    document.getElementById("edit_student_address").value = data.address;
+    document.getElementById("edit_student_code").value = data.code;
+    document.getElementById("edit_student_email").value = data.email;
+    document.getElementById("edit_student_math").value = data.math;
+    document.getElementById("edit_student_physics").value = data.physics;
+    document.getElementById("edit_student_chemistry").value = data.chemistry;
   } catch (error) {
     console.log(error);
   }

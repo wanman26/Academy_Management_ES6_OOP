@@ -1,7 +1,7 @@
 [
    {
       "id":"1",
-    "category":"student",
+      "category":"student",
       "fullName":"Trần Văn Minh",
       "address":"Hồ Chí Minh",
       "code":"S-1",
@@ -12,7 +12,7 @@
    },
    {
       "id":"2",
-    "category":"student",
+      "category":"student",
       "fullName":"Nguyễn Thị Hương",
       "address":"Hà Nội",
       "code":"S-2",
@@ -23,7 +23,7 @@
    },
    {
       "id":"3",
-    "category":"student",
+      "category":"student",
       "fullName":"Lê Văn Quốc",
       "address":"Đà Nẵng",
       "code":"S-3",
@@ -33,7 +33,8 @@
       "chemistry":"9"
    },
    {
-    "category":"student",
+      "id":"4",
+      "category":"student",
       "fullName":"Phạm Thị Hà",
       "address":"Hồ Chí Minh",
       "code":"S-4",
@@ -43,7 +44,8 @@
       "chemistry":"6"
    },
    {
-    "category":"student",
+      "id":"5",
+      "category":"student",
       "fullName":"Hoàng Văn Hùng",
       "address":"Hà Nội",
       "code":"S-5",
@@ -53,7 +55,8 @@
       "chemistry":"7"
    },
    {
-    "category":"student",
+      "id":"6",
+      "category":"student",
       "fullName":"Trần Thị Linh",
       "address":"Hồ Chí Minh",
       "code":"S-6",
@@ -63,7 +66,8 @@
       "chemistry":"8"
    },
    {
-    "category":"student",
+      "id":"7",
+      "category":"student",
       "fullName":"Lê Minh Tâm",
       "address":"Đà Nẵng",
       "code":"S-7",
@@ -73,7 +77,8 @@
       "chemistry":"7"
    },
    {
-    "category":"student",
+      "id":"8",
+      "category":"student",
       "fullName":"Nguyễn Thị Trang",
       "address":"Hà Nội",
       "code":"S-8",
@@ -83,7 +88,8 @@
       "chemistry":"9"
    },
    {
-    "category":"student",
+      "id":"9",
+      "category":"student",
       "fullName":"Phạm Văn Thành",
       "address":"Hồ Chí Minh",
       "code":"S-9",
@@ -93,7 +99,8 @@
       "chemistry":"6"
    },
    {
-    "category":"student",
+      "id":"10",
+      "category":"student",
       "fullName":"Hoàng Văn Anh",
       "address":"Hà Nội",
       "code":"S-10",
@@ -102,8 +109,9 @@
       "physics":"8",
       "chemistry":"7"
    },
-{
-    "category":"employee",
+   {
+      "id":"11",
+      "category":"employee",
       "fullName":"Nguyễn Văn Quang",
       "address":"Hồ Chí Minh",
       "code":"E-1",
@@ -112,7 +120,8 @@
       "dailySalary":"50"
    },
    {
-    "category":"employee",
+      "id":"12",
+      "category":"employee",
       "fullName":"Trần Văn Hòa",
       "address":"Hà Nội",
       "code":"E-2",
@@ -121,7 +130,8 @@
       "dailySalary":"55"
    },
    {
-    "category":"employee",
+      "id":"13",
+      "category":"employee",
       "fullName":"Lê Thị Bảo",
       "address":"Đà Nẵng",
       "code":"E-3",
@@ -130,7 +140,8 @@
       "dailySalary":"48"
    },
    {
-    "category":"employee",
+      "id":"14",
+      "category":"employee",
       "fullName":"Phạm Minh Tú",
       "address":"Hồ Chí Minh",
       "code":"E-4",
@@ -139,7 +150,8 @@
       "dailySalary":"52"
    },
    {
-    "category":"employee",
+      "id":"15",
+      "category":"employee",
       "fullName":"Hoàng Thị Lan",
       "address":"Hà Nội",
       "code":"E-5",
@@ -148,7 +160,8 @@
       "dailySalary":"49"
    },
    {
-    "category":"employee",
+      "id":"16",
+      "category":"employee",
       "fullName":"Nguyễn Văn An",
       "address":"Đà Nẵng",
       "code":"E-6",
@@ -157,7 +170,8 @@
       "dailySalary":"51"
    },
    {
-    "category":"employee",
+      "id":"17",
+      "category":"employee",
       "fullName":"Lê Minh Thảo",
       "address":"Hà Nội",
       "code":"E-7",
@@ -166,7 +180,8 @@
       "dailySalary":"50"
    },
    {
-    "category":"employee",
+      "id":"18",
+      "category":"employee",
       "fullName":"Trần Văn Quốc",
       "address":"Đà Nẵng",
       "code":"E-8",
@@ -175,7 +190,8 @@
       "dailySalary":"54"
    },
    {
-    "category":"employee",
+      "id":"19",
+      "category":"employee",
       "fullName":"Phạm Thị Hương",
       "address":"Hồ Chí Minh",
       "code":"E-9",
@@ -184,7 +200,8 @@
       "dailySalary":"53"
    },
    {
-    "category":"employee",
+      "id":"20",
+      "category":"employee",
       "fullName":"Lê Văn Long",
       "address":"Hà Nội",
       "code":"E-10",
@@ -193,7 +210,8 @@
       "dailySalary":"47"
    },
    {
-    "category":"customer",
+      "id":"21",
+      "category":"customer",
       "fullName":"Lê Văn Quang",
       "address":"Hồ Chí Minh",
       "code":"C-1",
@@ -203,7 +221,8 @@
       "rate":"5"
    },
    {
-    "category":"customer",
+      "id":"22",
+      "category":"customer",
       "fullName":"Trần Văn Hòa",
       "address":"Hà Nội",
       "code":"C-2",
@@ -213,7 +232,8 @@
       "rate":"4"
    },
    {
-    "category":"customer",
+      "id":"23",
+      "category":"customer",
       "fullName":"Lê Thị Bảo",
       "address":"Đà Nẵng",
       "code":"C-3",
@@ -223,7 +243,8 @@
       "rate":"5"
    },
    {
-    "category":"customer",
+      "id":"24",
+      "category":"customer",
       "fullName":"Phạm Minh Tú",
       "address":"Hồ Chí Minh",
       "code":"C-4",
@@ -233,7 +254,8 @@
       "rate":"4"
    },
    {
-    "category":"customer",
+      "id":"25",
+      "category":"customer",
       "fullName":"Hoàng Thị Lan",
       "address":"Hà Nội",
       "code":"C-5",
@@ -243,5 +265,3 @@
       "rate":"3"
    }
 ]
-
-

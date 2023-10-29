@@ -21,4 +21,11 @@ function CallApi() {
     });
     return promise;
   };
+  this.getPersonById = (id) => {
+    let promise = axios({
+      url: `https://6519a404818c4e98ac609bd3.mockapi.io/api/academy/${id}`,
+      method: "GET",
+    });
+    return promise;
+  };
 }
