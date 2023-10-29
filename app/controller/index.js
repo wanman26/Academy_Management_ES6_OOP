@@ -280,7 +280,6 @@ async function deletePerson(event) {
   }
 }
 // EDIT STUDENT
-// editPerson_${person.id}
 document.getElementById("tblBody").addEventListener("click", editPerson);
 async function editPerson(event) {
   // console.log(event.target.id);
@@ -299,7 +298,7 @@ async function fillInfo(id) {
       `https://6519a404818c4e98ac609bd3.mockapi.io/api/academy/${id}`
     );
     console.log(data.fullName);
-    // FILL INTO INPUT
+    // FILL INTO INPUT STUDENT
     document.getElementById("edit_student_name").value = data.fullName;
     document.getElementById("edit_student_address").value = data.address;
     document.getElementById("edit_student_code").value = data.code;
@@ -307,6 +306,24 @@ async function fillInfo(id) {
     document.getElementById("edit_student_math").value = data.math;
     document.getElementById("edit_student_physics").value = data.physics;
     document.getElementById("edit_student_chemistry").value = data.chemistry;
+    // FILL INTO INPUT EMPLOYEE
+    document.getElementById("edit_employee_name").value = data.fullName;
+    document.getElementById("edit_employee_address").value = data.address;
+    document.getElementById("edit_employee_code").value = data.code;
+    document.getElementById("edit_employee_email").value = data.email;
+    document.getElementById("edit_employee_working_day").value =
+      data.workingDay;
+    document.getElementById("edit_employee_daily_salary").value =
+      data.dailySalary;
+    // FILL INTO INPUT CUSTOMER
+    document.getElementById("edit_customer_name").value = data.fullName;
+    document.getElementById("edit_customer_address").value = data.address;
+    document.getElementById("edit_customer_code").value = data.code;
+    document.getElementById("edit_customer_email").value = data.email;
+    document.getElementById("edit_customer_company_name").value =
+      data.companyName;
+    document.getElementById("edit_customer_invoice").value = data.invoice;
+    document.getElementById("edit_customer_rate").value = data.rate;
   } catch (error) {
     console.log(error);
   }
