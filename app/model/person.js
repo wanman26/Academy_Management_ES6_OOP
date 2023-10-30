@@ -1,5 +1,6 @@
 class Person {
-  constructor(category, fullName, address, code, email) {
+  constructor(id, category, fullName, address, code, email) {
+    this.id = id;
     this.category = category;
     this.fullName = fullName;
     this.address = address;
@@ -9,6 +10,7 @@ class Person {
 }
 export class Student extends Person {
   constructor(
+    id,
     category,
     fullName,
     address,
@@ -18,7 +20,7 @@ export class Student extends Person {
     physics,
     chemistry
   ) {
-    super(category, fullName, address, code, email);
+    super(id, category, fullName, address, code, email);
     this.math = math;
     this.physics = physics;
     this.chemistry = chemistry;
@@ -30,6 +32,7 @@ export class Student extends Person {
 
 export class Employee extends Person {
   constructor(
+    id,
     category,
     fullName,
     address,
@@ -39,7 +42,7 @@ export class Employee extends Person {
     dailySalary,
     rate
   ) {
-    super(category, fullName, address, code, email, rate);
+    super(id, category, fullName, address, code, email, rate);
     this.workingDay = workingDay;
     this.dailySalary = dailySalary;
     this.rate = rate;
@@ -51,6 +54,7 @@ export class Employee extends Person {
 
 export class Customer extends Person {
   constructor(
+    id,
     category,
     fullName,
     address,
@@ -60,7 +64,7 @@ export class Customer extends Person {
     invoice,
     rate
   ) {
-    super(category, fullName, address, code, email);
+    super(id, category, fullName, address, code, email);
     this.companyName = companyName;
     this.invoice = invoice;
     this.rate = rate;

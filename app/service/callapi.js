@@ -28,4 +28,12 @@ function CallApi() {
     });
     return promise;
   };
+  this.updatePersonById = (person) => {
+    let promise = axios({
+      url: `https://6519a404818c4e98ac609bd3.mockapi.io/api/academy/${person.id}`,
+      method: "PUT",
+      data: person,
+    });
+    return promise;
+  };
 }
