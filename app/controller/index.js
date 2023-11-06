@@ -35,6 +35,7 @@ function handleButtonClick(event) {
   event.target.classList.add("selected");
 }
 getListPeople(student);
+let fullNameList = [];
 async function getListPeople(data) {
   try {
     const { data: academyList } = await axios.get(
@@ -46,6 +47,7 @@ async function getListPeople(data) {
     let customers = [];
     for (let person of academyList) {
       let category = person.category;
+      fullNameList.push(person.fullName);
       switch (category) {
         case "student":
           students.push(person);
@@ -150,6 +152,18 @@ function renderUICustomer(data) {
   }
   document.getElementById("tblDataCustomers").innerHTML = content;
 }
+//!VALIDATION
+function validation(id, category, name, address, code, email) {
+  let isValid = true;
+
+  isValid &=
+    kiemTraRong(id, "alert_id", "Vui lòng không bỏ trống") &&
+    kiemTraRong(category, "alert_category", "Vui lòng không bỏ trống") &&
+    kiemTraRong(name, "alert_name", "Vui lòng không bỏ trống") &&
+    kiemTraRong(address, "alert_address", "Vui lòng không bỏ trống") &&
+    kiemTraRong(code, "alert_code", "Vui lòng không bỏ trống") &&
+    kiemTraRong(email, "alert_email", "Vui lòng không bỏ trống");
+}
 
 // ADD STUDENT
 document.getElementById("btnAddStudent").addEventListener("click", addStudent);
@@ -165,6 +179,18 @@ async function addStudent() {
     let student_math = document.getElementById("student_math").value;
     let student_physics = document.getElementById("student_physics").value;
     let student_chemistry = document.getElementById("student_chemistry").value;
+    validation(
+      student_id,
+      student_category,
+      student_name,
+      student_address,
+      student_code,
+      student_email
+    );
+    if (!isValid) {
+      return null;
+    }
+
     // Create student object
     let student = new Student(
       student_id,
@@ -203,6 +229,7 @@ async function addEmployee() {
     let employee_daily_salary = document.getElementById(
       "employee_daily_salary"
     ).value;
+
     // Create employee object
     let employee = new Employee(
       employee_id,
@@ -451,3 +478,5 @@ async function updateCustomer() {
     console.log(error);
   }
 }
+// SORT BY FULL NAME
+document.getElementById("sortNameStudent").onclick = function () {};
