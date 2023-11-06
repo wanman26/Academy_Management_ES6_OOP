@@ -53,6 +53,7 @@
                                     data-target="#myModalEmployee">Employee</button>
                                 <button id="addCustomer" class="btn btn-light w-100" type="button" data-toggle="modal"
                                     data-target="#myModalCustomer">Customer</button>
+
                             </div>
                         </li>
                     </ul>
@@ -64,7 +65,7 @@
                 <table id="table_student">
                     <thead id="headStudent">
                         <tr>
-                            <th>Full Name</th>
+                            <th>Full Name <i id="sortNameStudent" class="fa-solid fa-sort ml-2"></i></th>
                             <th>Address</th>
                             <th>Code</th>
                             <th>Email</th>
@@ -97,7 +98,7 @@
                 <table id="table_employee">
                     <thead id="headEmployee">
                         <tr>
-                            <th>Full Name</th>
+                            <th>Full Name <i class="fa-solid fa-sort ml-2"></i></th>
                             <th>Address</th>
                             <th>Code</th>
                             <th>Email</th>
@@ -128,7 +129,7 @@
                 <table id="table_customer">
                     <thead id="headCustomer">
                         <tr>
-                            <th>Full Name</th>
+                            <th>Full Name <i class="fa-solid fa-sort ml-2"></i></th>
                             <th>Address</th>
                             <th>Code</th>
                             <th>Email</th>
@@ -181,6 +182,7 @@
                     <div class="form-group">
                         <label for="">ID</label>
                         <input id="student_id" class="form-control" type="text" placeholder="Ex: 1">
+                        <span class="sp_alert" id="alert_id"></span>
                     </div>
                     <div class="form-group">
                         <label for="">Full Name</label>
@@ -524,6 +526,7 @@
         integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- MAIN SCRIPT -->
+    <script src="./app/controller/validation.js"></script>
     <script src="./app/service/callapi.js"></script>
     <script type="module" src="./app/controller/index.js"></script>
 

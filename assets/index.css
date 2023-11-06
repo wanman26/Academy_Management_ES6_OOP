@@ -109,10 +109,7 @@ table td b {
 }
 
 
-.tblFoot {
-    position: relative;
-    float: right;
-}
+
 
 #table_student {
     margin-top: 10px;
@@ -126,9 +123,28 @@ table td b {
     margin-top: 10px;
 }
 
+.tblBody .fa-sort {
+    background-color: #E1E7F0;
+    color: #34495E;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.tblBody .fa-sort:hover {
+    background-color: white;
+
+
+}
+
 .selected {
     background-color: rgba(0, 132, 255, 0.753) !important;
     color: white !important;
+}
+
+.tblFoot {
+    position: relative;
+    float: right;
 }
 
 .form-group label {
